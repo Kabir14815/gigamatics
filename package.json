@@ -1,0 +1,23 @@
+{
+  "name": "gigamatics",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && cp dist/index.html dist/404.html && node scripts/verify-build.mjs",
+    "build:pages": "VITE_BASE=/gigamatics/ vite build && cp dist/index.html dist/404.html",
+    "build:netlify": "npm run build",
+    "preview": "vite preview",
+    "start": "vite"
+  },
+  "dependencies": {
+    "framer-motion": "^12.23.12",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.18.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.2",
+    "vite": "^7.1.3"
+  }
+}

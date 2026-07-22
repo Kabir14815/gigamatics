@@ -1,0 +1,847 @@
+﻿<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="js/dc-runtime.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/05a38ac0-efe9-458b-84c2-47230fde63b8.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/44f0d3a4-1829-4951-9af3-9b510098e255.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/581103ae-1838-44fd-a5c2-f84e89dd037e.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/9cf339a0-baee-4c84-bc5e-d569766f94d2.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/369c6548-a260-42de-972d-9ec1bf412ef3.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/e45e94e7-441b-4704-9be8-deec5b34464a.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/05a38ac0-efe9-458b-84c2-47230fde63b8.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/44f0d3a4-1829-4951-9af3-9b510098e255.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/581103ae-1838-44fd-a5c2-f84e89dd037e.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/9cf339a0-baee-4c84-bc5e-d569766f94d2.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/369c6548-a260-42de-972d-9ec1bf412ef3.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/e45e94e7-441b-4704-9be8-deec5b34464a.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/05a38ac0-efe9-458b-84c2-47230fde63b8.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/44f0d3a4-1829-4951-9af3-9b510098e255.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/581103ae-1838-44fd-a5c2-f84e89dd037e.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/9cf339a0-baee-4c84-bc5e-d569766f94d2.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/369c6548-a260-42de-972d-9ec1bf412ef3.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/e45e94e7-441b-4704-9be8-deec5b34464a.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/05a38ac0-efe9-458b-84c2-47230fde63b8.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/44f0d3a4-1829-4951-9af3-9b510098e255.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/581103ae-1838-44fd-a5c2-f84e89dd037e.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/9cf339a0-baee-4c84-bc5e-d569766f94d2.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/369c6548-a260-42de-972d-9ec1bf412ef3.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/e45e94e7-441b-4704-9be8-deec5b34464a.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/e177000b-2995-4845-a68f-16dac321328f.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/e973ada3-ff7d-4c8c-aa29-e14a65c45202.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/b48f7787-98d9-43d0-8671-757cb72cc018.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/e177000b-2995-4845-a68f-16dac321328f.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/e973ada3-ff7d-4c8c-aa29-e14a65c45202.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/b48f7787-98d9-43d0-8671-757cb72cc018.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/e177000b-2995-4845-a68f-16dac321328f.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/e973ada3-ff7d-4c8c-aa29-e14a65c45202.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/b48f7787-98d9-43d0-8671-757cb72cc018.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+  body{background:#F4F7FB}
+  ::selection{background:#0F62D4;color:#fff}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  @keyframes gm-fade-up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes gm-shimmer{0%{background-position:200% center}100%{background-position:-200% center}}
+  .gm-page{position:relative}
+  .gm-ambient{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+  .gm-ambient span{position:absolute;border-radius:50%;filter:blur(80px);opacity:.45}
+  .gm-ambient .gm-glow-1{width:680px;height:680px;top:-220px;right:-180px;background:radial-gradient(circle,color-mix(in oklab,var(--accent,#0F62D4) 18%,transparent),transparent 70%)}
+  .gm-ambient .gm-glow-2{width:520px;height:520px;top:480px;left:-200px;background:radial-gradient(circle,color-mix(in oklab,var(--accent,#0F62D4) 10%,transparent),transparent 70%)}
+  .gm-ambient .gm-grain{position:absolute;inset:0;opacity:.028;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  .gm-section{max-width:1240px;margin:0 auto;padding-left:34px;padding-right:34px}
+  .gm-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+  .gm-eyebrow-line{width:26px;height:1px;background:var(--accent,#0F62D4);flex-shrink:0}
+  .gm-eyebrow-text{font-size:12.5px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent,#0F62D4)}
+  .gm-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.22,1,.36,1)}
+  .gm-img-wrap{overflow:hidden;position:relative;background:var(--ph,#EBE6DB)}
+  .gm-img-wrap:hover .gm-img{transform:scale(1.04)}
+  .gm-grid-stretch{align-items:stretch}
+  .gm-grid-stretch>*{height:100%}
+  .gm-card-fill{display:flex;flex-direction:column;height:100%}
+  .gm-card-fill>p:last-of-type{flex:1}
+  .gm-card{transition:border-color .35s ease,transform .35s ease,box-shadow .35s ease}
+  .gm-nav{transition:background .35s ease,box-shadow .35s ease,border-color .35s ease}
+  .gm-nav-links a{position:relative;transition:color .25s ease}
+  .gm-nav-links a::after{content:'';position:absolute;left:0;bottom:-4px;width:100%;height:1px;background:var(--accent,#0F62D4);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+  .gm-nav-links a:hover::after{transform:scaleX(1)}
+  .gm-btn{display:inline-flex;align-items:center;justify-content:center;font-weight:600;border-radius:10px;transition:transform .25s ease,box-shadow .25s ease,opacity .25s ease,background .25s ease,border-color .25s ease;cursor:pointer}
+  .gm-btn-primary{background:var(--accent,#0F62D4);color:#fff;box-shadow:0 4px 14px -4px color-mix(in oklab,var(--accent,#0F62D4) 55%,transparent)}
+  .gm-btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px -6px color-mix(in oklab,var(--accent,#0F62D4) 50%,transparent);opacity:1}
+  .gm-btn-secondary{background:transparent;color:var(--ink,#0F172A);border:1px solid var(--line,rgba(15,23,42,0.08))}
+  .gm-btn-secondary:hover{background:var(--bg2,#FAFBFD);border-color:color-mix(in oklab,var(--accent,#0F62D4) 30%,var(--line,rgba(15,23,42,0.08)))}
+  .gm-btn-dark{background:var(--ink,#0F172A);color:var(--bg,#F4F7FB);box-shadow:0 4px 14px -4px rgba(28,27,23,0.35)}
+  .gm-btn-dark:hover{transform:translateY(-1px);opacity:.92}
+  .gm-stat-card{backdrop-filter:blur(12px);background:color-mix(in oklab,var(--card,#FFFFFF) 92%,transparent)!important;box-shadow:0 24px 48px -20px rgba(28,27,23,0.28),0 0 0 1px color-mix(in oklab,var(--line,rgba(15,23,42,0.08)) 80%,transparent)}
+  .gm-trust-logo{font-family:'Newsreader',serif;font-size:20px;color:var(--ink,#0F172A);opacity:.55;letter-spacing:0.02em;transition:opacity .3s ease}
+  .gm-trust-logo:hover{opacity:.85}
+  .gm-pillar-card{border:1px solid var(--line,rgba(28,27,23,0.1));border-radius:18px;background:var(--card,#FFFFFF);box-shadow:0 1px 2px rgba(28,27,23,0.04),0 8px 24px -12px rgba(28,27,23,0.08)}
+  .gm-pillar-card:hover{border-color:color-mix(in oklab,var(--accent,#0F62D4) 35%,transparent);transform:translateY(-5px);box-shadow:0 24px 48px -24px rgba(28,27,23,0.22)}
+  .gm-managed-card{border:1px solid var(--line,rgba(28,27,23,0.1));border-radius:16px;background:var(--card,#FFFFFF);box-shadow:0 1px 2px rgba(28,27,23,0.03);transition:border-color .3s ease,box-shadow .3s ease,transform .3s ease}
+  .gm-managed-card:hover{border-color:color-mix(in oklab,var(--accent,#0F62D4) 40%,transparent);box-shadow:0 12px 32px -16px rgba(28,27,23,0.14);transform:translateY(-2px)}
+  .gm-industry-card{border:1px solid var(--line,rgba(28,27,23,0.1));border-radius:16px;overflow:hidden;background:var(--card,#FFFFFF);box-shadow:0 1px 2px rgba(28,27,23,0.04);transition:box-shadow .35s ease,transform .35s ease}
+  .gm-industry-card:hover{box-shadow:0 20px 40px -20px rgba(15,23,42,0.18);transform:translateY(-3px)}
+  .gm-impact{background:linear-gradient(165deg,#0F172A 0%,#0F1E36 45%,#0A0F1D 100%)!important;position:relative;overflow:hidden}
+  .gm-impact::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 20% 0%,color-mix(in oklab,var(--accent,#0F62D4) 22%,transparent),transparent 55%),radial-gradient(ellipse 60% 50% at 90% 80%,rgba(130,177,255,0.08),transparent 50%);pointer-events:none}
+  .gm-faq-item{border:1px solid var(--line,rgba(28,27,23,0.1));border-radius:14px;background:var(--card,#FFFFFF);overflow:hidden;transition:box-shadow .3s ease,border-color .3s ease}
+  .gm-faq-item:hover{box-shadow:0 8px 24px -12px rgba(28,27,23,0.1);border-color:color-mix(in oklab,var(--accent,#0F62D4) 25%,transparent)}
+  .gm-cta-box{position:relative;border-radius:24px;padding:clamp(46px,7vw,82px);text-align:center;overflow:hidden;border:1px solid color-mix(in oklab,var(--accent,#0F62D4) 20%,var(--line,rgba(15,23,42,0.08)));background:linear-gradient(145deg,var(--card,#FFFFFF) 0%,color-mix(in oklab,var(--accent,#0F62D4) 4%,var(--card,#FFFFFF)) 100%);box-shadow:0 32px 64px -32px rgba(15,23,42,0.18),inset 0 1px 0 rgba(255,255,255,0.8)}
+  .gm-cta-box::before{content:'';position:absolute;top:-40%;right:-15%;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,color-mix(in oklab,var(--accent,#0F62D4) 12%,transparent),transparent 70%);pointer-events:none}
+  .gm-quote{position:relative}
+  .gm-quote::before{content:'\201C';position:absolute;left:-6px;top:-28px;font-family:'Newsreader',serif;font-size:96px;line-height:1;color:color-mix(in oklab,var(--accent,#0F62D4) 14%,transparent);pointer-events:none;user-select:none}
+  .gm-hero-in{animation:gm-fade-up .9s cubic-bezier(.22,1,.36,1) both}
+  .gm-hero-in-2{animation:gm-fade-up .9s cubic-bezier(.22,1,.36,1) .12s both}
+  .gm-hero-in-3{animation:gm-fade-up .9s cubic-bezier(.22,1,.36,1) .24s both}
+  .gm-hero-in-4{animation:gm-fade-up .9s cubic-bezier(.22,1,.36,1) .36s both}
+  @media(max-width:1024px){
+    .gm-split-2{grid-template-columns:1fr!important}
+    .gm-split-3{grid-template-columns:1fr!important}
+    .gm-split-4{grid-template-columns:repeat(2,1fr)!important}
+    .gm-footer{grid-template-columns:1fr 1fr!important}
+    .gm-leadership{grid-template-columns:1fr!important;gap:40px!important}
+    .gm-leadership .gm-img-wrap{margin:0 auto!important}
+    .gm-nav-links{display:none!important}
+  }
+  @media(max-width:640px){
+    .gm-split-4{grid-template-columns:1fr!important}
+    .gm-footer{grid-template-columns:1fr!important}
+    .gm-hero-stats{position:relative!important;left:auto!important;bottom:auto!important;margin-top:20px!important;width:100%;flex-direction:column;align-items:stretch!important;gap:18px!important}
+    .gm-hero-stats>div[style*="width:1px"]{display:none!important}
+    .gm-section,.gm-section-inner{padding-left:22px!important;padding-right:22px!important}
+    nav .gm-section{padding-left:22px!important;padding-right:22px!important}
+    .gm-quote::before{font-size:64px;top:-18px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .gm-hero-in,.gm-hero-in-2,.gm-hero-in-3,.gm-hero-in-4{animation:none}
+    .gm-img,.gm-card,.gm-pillar-card,.gm-managed-card,.gm-industry-card,.gm-btn{transition:none}
+    .gm-img-wrap:hover .gm-img{transform:none}
+  }
+</style>
+
+</helmet>
+<div class="gm-page" style="--bg:#F4F7FB;--bg2:#FAFBFD;--card:#FFFFFF;--ink:#0F172A;--muted:#64748B;--line:rgba(15,23,42,0.08);--accent:#0F62D4;--ph:#EBE6DB; {{ vars }} background:var(--bg,#F4F7FB);color:var(--ink,#0F172A);font-family:'Manrope',system-ui,sans-serif;min-height:100vh;overflow-x:hidden;position:relative;">
+
+  <div class="gm-ambient" aria-hidden="true">
+    <span class="gm-glow-1"></span>
+    <span class="gm-glow-2"></span>
+    <span class="gm-grain"></span>
+  </div>
+
+  <!-- NAV -->
+  <nav class="gm-nav" style="position:sticky;top:0;z-index:50;backdrop-filter:blur(16px) saturate(1.4);background:color-mix(in oklab, var(--bg,#F4F7FB) 78%, transparent);border-bottom:1px solid var(--line,rgba(15,23,42,0.08));">
+    <div class="gm-section" style="padding-top:18px;padding-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <a href="Gigamatics.dc.html" style="display:flex;align-items:center;">
+        <img src="assets/logo.png" alt="GIGAMATICS" style="height:30px;width:auto;display:block;" />
+      </a>
+      <div class="gm-nav-links" style="display:flex;align-items:center;gap:32px;font-size:14.5px;color:var(--muted,#64748B);">
+        <a href="Gigamatics.dc.html" style-hover="color:var(--ink,#0F172A)">Home</a>
+        <a href="About.dc.html" style-hover="color:var(--ink,#0F172A)">About</a>
+        <a href="Services.dc.html" style-hover="color:var(--ink,#0F172A)">Services</a>
+        <a href="#managed" style-hover="color:var(--ink,#0F172A)">Managed Services</a>
+        <a href="Contact.dc.html" style-hover="color:var(--ink,#0F172A)">Contact</a>
+      </div>
+      <a href="Contact.dc.html" class="gm-btn gm-btn-dark" style="font-size:14.5px;padding:11px 22px;white-space:nowrap;">Let's Talk</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="gm-section" style="position:relative;z-index:1;padding-top:96px;padding-bottom:0;">
+    <div class="gm-eyebrow gm-hero-in" style="margin-bottom:28px;">
+      <span class="gm-eyebrow-line"></span>
+      <span class="gm-eyebrow-text">Enterprise Technology Partner</span>
+    </div>
+    <h1 class="gm-hero-in-2" style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(44px,6.6vw,88px);line-height:1.03;letter-spacing:-0.025em;max-width:16ch;margin-bottom:30px;">Designing resilient platforms, from strategy through <em style="font-style:italic;color:var(--accent,#0F62D4);">operations.</em></h1>
+    <p class="gm-hero-in-3" style="font-size:clamp(17px,1.5vw,21px);line-height:1.65;color:var(--muted,#64748B);max-width:58ch;margin-bottom:38px;">We bring together senior practitioners across cloud, data, security and platform engineering to help enterprises modernize with confidence — from strategy through operations.</p>
+    <div class="gm-hero-in-4" style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;">
+      <a href="Contact.dc.html" class="gm-btn gm-btn-primary" style="font-size:15.5px;padding:15px 28px;">Start a Conversation</a>
+      <a href="Services.dc.html" class="gm-btn gm-btn-secondary" style="font-size:15.5px;padding:15px 26px;">Explore Services</a>
+    </div>
+
+    <!-- hero image band + floating stat -->
+    <div class="gm-hero-in-4" style="position:relative;margin-top:68px;padding-bottom:56px;">
+      <div class="gm-img-wrap" style="border-radius:20px;aspect-ratio:16/7;border:1px solid var(--line,rgba(15,23,42,0.08));box-shadow:0 32px 64px -32px rgba(28,27,23,0.22);">
+        <img class="gm-img" style="object-position:center 30%" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&amp;fit=crop&amp;w=1800&amp;q=85" alt="Platform engineering team collaborating in a modern workspace" loading="eager">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(28,27,23,0.22), transparent 50%);pointer-events:none;"></div>
+      </div>
+      <div class="gm-hero-stats gm-stat-card" style="position:absolute;left:28px;bottom:0;border-radius:16px;padding:22px 30px;display:flex;gap:32px;align-items:center;">
+        <div>
+          <div style="font-family:'Newsreader',serif;font-weight:500;font-size:36px;line-height:1;letter-spacing:-0.02em;color:var(--accent,#0F62D4);">99.99%</div>
+          <div style="font-size:12.5px;color:var(--muted,#64748B);margin-top:7px;letter-spacing:0.02em;">Platform uptime</div>
+        </div>
+        <div style="width:1px;height:44px;background:var(--line,rgba(15,23,42,0.08));"></div>
+        <div>
+          <div style="font-family:'Newsreader',serif;font-weight:500;font-size:36px;line-height:1;letter-spacing:-0.02em;color:var(--accent,#0F62D4);">100%</div>
+          <div style="font-size:12.5px;color:var(--muted,#64748B);margin-top:7px;letter-spacing:0.02em;">Audits passed</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- TRUST LINE -->
+  <section class="gm-section" style="position:relative;z-index:1;padding-top:80px;padding-bottom:36px;">
+    <div style="display:flex;align-items:center;justify-content:center;gap:28px 36px;flex-wrap:wrap;text-align:center;padding:28px 0;border-top:1px solid var(--line,rgba(15,23,42,0.08));border-bottom:1px solid var(--line,rgba(15,23,42,0.08));">
+      <span style="font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted,#64748B);">Multi-cloud · vendor agnostic</span>
+      <span style="width:4px;height:4px;border-radius:50%;background:var(--accent,#0F62D4);opacity:.6;"></span>
+      <span class="gm-trust-logo">AWS</span>
+      <span class="gm-trust-logo">Microsoft Azure</span>
+      <span class="gm-trust-logo">Google Cloud</span>
+      <span class="gm-trust-logo">Oracle</span>
+    </div>
+  </section>
+
+  <!-- CONSULT / IMPLEMENT / OPERATE -->
+  <section class="gm-section" style="position:relative;z-index:1;padding-top:54px;padding-bottom:30px;">
+    <div class="gm-eyebrow" style="margin-bottom:36px;">
+      <span class="gm-eyebrow-line"></span>
+      <span class="gm-eyebrow-text">How we engage</span>
+    </div>
+    <div class="gm-split-3 gm-grid-stretch" style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;">
+      <sc-for list="{{ model }}" as="m" hint-placeholder-count="3">
+        <div style="border-top:1px solid var(--ink,#0F172A);padding-top:24px;">
+          <div style="font-family:'Newsreader',serif;font-weight:500;font-size:15px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent,#0F62D4);margin-bottom:16px;">{{ m.kicker }}</div>
+          <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:27px;letter-spacing:-0.01em;margin-bottom:12px;">{{ m.title }}</h3>
+          <p style="font-size:15px;line-height:1.62;color:var(--muted,#64748B);">{{ m.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- SIX PILLARS -->
+  <section id="pillars" class="gm-section" style="position:relative;z-index:1;padding-top:70px;padding-bottom:84px;">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:46px;">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+          <span style="width:26px;height:1px;background:var(--accent,#0F62D4);"></span>
+          <span style="font-size:12.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent,#0F62D4);">Our expertise</span>
+        </div>
+        <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(34px,4.6vw,58px);letter-spacing:-0.02em;line-height:1.06;max-width:16ch;">Six pillars of enterprise technology.</h2>
+      </div>
+      <p style="font-size:16px;color:var(--muted,#64748B);max-width:36ch;line-height:1.6;">Our consultants bring deep, domain-specific expertise to your most complex challenges — from cloud migration to AI-powered automation.</p>
+    </div>
+
+    <div class="gm-split-3 gm-grid-stretch" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
+      <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="6">
+        <a href="Services.dc.html" class="gm-card-fill gm-pillar-card gm-card" style="display:flex;padding:32px 28px 28px;">
+          <div style="font-family:'Newsreader',serif;font-weight:500;font-size:21px;color:var(--accent,#0F62D4);margin-bottom:18px;">{{ p.num }}</div>
+          <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:23px;letter-spacing:-0.01em;margin-bottom:11px;line-height:1.18;">{{ p.title }}</h3>
+          <p style="font-size:14.5px;line-height:1.62;color:var(--muted,#64748B);margin-bottom:18px;">{{ p.body }}</p>
+          <span style="font-size:13.5px;font-weight:600;color:var(--accent,#0F62D4);">Learn more →</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- WHAT WE DELIVER -->
+  <section style="position:relative;z-index:1;background:var(--bg2,#FAFBFD);border-top:1px solid var(--line,rgba(15,23,42,0.08));border-bottom:1px solid var(--line,rgba(15,23,42,0.08));">
+    <div class="gm-section gm-section-inner gm-split-2" style="padding-top:86px;padding-bottom:86px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+          <span style="width:26px;height:1px;background:var(--accent,#0F62D4);"></span>
+          <span style="font-size:12.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent,#0F62D4);">What we deliver</span>
+        </div>
+        <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(32px,4.2vw,52px);letter-spacing:-0.02em;line-height:1.08;margin-bottom:20px;">Strategy to execution.</h2>
+        <p style="font-size:16px;color:var(--muted,#64748B);line-height:1.62;margin-bottom:32px;max-width:48ch;">Structured, end-to-end consulting engagements that translate enterprise strategy into secure, scalable execution. Every engagement is architecture-led, outcome-defined and operationally accountable.</p>
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <sc-for list="{{ deliver }}" as="d" hint-placeholder-count="4">
+            <div style="display:flex;gap:15px;align-items:flex-start;">
+              <span style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:linear-gradient(145deg,color-mix(in oklab,var(--accent,#0F62D4) 18%,transparent),color-mix(in oklab,var(--accent,#0F62D4) 8%,transparent));color:var(--accent,#0F62D4);display:grid;place-items:center;font-size:12px;font-weight:700;margin-top:1px;box-shadow:inset 0 0 0 1px color-mix(in oklab,var(--accent,#0F62D4) 20%,transparent);">✓</span>
+              <p style="font-size:15.5px;line-height:1.55;"><strong style="font-weight:700;">{{ d.h }}</strong> <span style="color:var(--muted,#64748B);">— {{ d.b }}</span></p>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div class="gm-img-wrap" style="border-radius:18px;aspect-ratio:4/3;border:1px solid var(--line,rgba(15,23,42,0.08));box-shadow:0 24px 48px -24px rgba(28,27,23,0.16);">
+        <img class="gm-img" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Strategy workshop with enterprise technology consultants" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY GIGAMATICS -->
+  <section class="gm-section" style="position:relative;z-index:1;padding-top:88px;padding-bottom:88px;">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+      <span style="width:26px;height:1px;background:var(--accent,#0F62D4);"></span>
+      <span style="font-size:12.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent,#0F62D4);">Why Gigamatics</span>
+    </div>
+    <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(34px,4.6vw,58px);letter-spacing:-0.02em;line-height:1.06;max-width:16ch;margin-bottom:48px;">The consulting advantage.</h2>
+    <div class="gm-split-4 gm-grid-stretch" style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;">
+      <sc-for list="{{ advantages }}" as="a" hint-placeholder-count="4">
+        <div style="border-top:1px solid var(--ink,#0F172A);padding-top:22px;">
+          <div style="font-family:'Newsreader',serif;font-weight:500;font-size:38px;color:var(--accent,#0F62D4);margin-bottom:16px;line-height:1;">{{ a.num }}</div>
+          <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:22px;margin-bottom:11px;line-height:1.2;">{{ a.title }}</h3>
+          <p style="font-size:14.5px;line-height:1.62;color:var(--muted,#64748B);">{{ a.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section id="impact" class="gm-impact" style="position:relative;z-index:1;color:#F4F1EA;">
+    <div class="gm-section" style="position:relative;z-index:1;padding-top:88px;padding-bottom:88px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+        <span style="width:26px;height:1px;background:#82B1FF;"></span>
+        <span style="font-size:12.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#82B1FF;">Measurable impact</span>
+      </div>
+      <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(34px,4.6vw,58px);letter-spacing:-0.02em;line-height:1.06;max-width:18ch;margin-bottom:50px;color:#FAFBFD;">Results that speak for themselves.</h2>
+      <div class="gm-split-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:48px 40px;">
+        <sc-for list="{{ impact }}" as="s" hint-placeholder-count="6">
+          <div style="border-top:1px solid rgba(244,241,234,0.2);padding-top:22px;min-height:180px;">
+            <div style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(44px,4.8vw,62px);letter-spacing:-0.02em;line-height:1;color:#FAFBFD;">{{ s.display }}</div>
+            <div style="margin-top:14px;font-weight:600;font-size:15.5px;">{{ s.label }}</div>
+            <div style="margin-top:8px;font-size:13.5px;color:rgba(244,241,234,0.6);line-height:1.55;">{{ s.desc }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANAGED -->
+  <section id="managed" class="gm-section" style="position:relative;z-index:1;padding-top:88px;padding-bottom:88px;">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:46px;">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+          <span style="width:26px;height:1px;background:var(--accent,#0F62D4);"></span>
+          <span style="font-size:12.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent,#0F62D4);">Managed services</span>
+        </div>
+        <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(34px,4.6vw,58px);letter-spacing:-0.02em;line-height:1.06;max-width:18ch;">Consulting-governed technology operations.</h2>
+      </div>
+      <p style="font-size:16px;color:var(--muted,#64748B);max-width:38ch;line-height:1.6;">Architecture standards and governance frameworks defined by subject-matter experts, with day-to-day execution under structured oversight.</p>
+    </div>
+    <div class="gm-split-3 gm-grid-stretch" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
+      <sc-for list="{{ managed }}" as="m" hint-placeholder-count="6">
+        <div class="gm-card-fill gm-managed-card" style="padding:28px 26px;">
+          <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:20px;margin-bottom:10px;display:flex;align-items:center;gap:11px;"><span style="width:7px;height:7px;border-radius:50%;background:var(--accent,#0F62D4);"></span>{{ m.title }}</h3>
+          <p style="font-size:14px;line-height:1.62;color:var(--muted,#64748B);">{{ m.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section id="industries" style="position:relative;z-index:1;background:var(--bg2,#FAFBFD);border-top:1px solid var(--line,rgba(15,23,42,0.08));border-bottom:1px solid var(--line,rgba(15,23,42,0.08));">
+    <div class="gm-section" style="padding-top:88px;padding-bottom:88px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+        <span style="width:26px;height:1px;background:var(--accent,#0F62D4);"></span>
+        <span style="font-size:12.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent,#0F62D4);">Industries we serve</span>
+      </div>
+      <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(34px,4.6vw,58px);letter-spacing:-0.02em;line-height:1.06;max-width:18ch;margin-bottom:18px;">Supporting critical industries.</h2>
+      <p style="font-size:16px;color:var(--muted,#64748B);max-width:62ch;line-height:1.62;margin-bottom:44px;">We support organizations in regulated and high-growth sectors where data integrity, operational reliability and governance are critical.</p>
+      <div class="gm-split-3 gm-grid-stretch" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
+        <sc-for list="{{ industries }}" as="ind" hint-placeholder-count="6">
+          <div class="gm-card-fill gm-industry-card">
+            <div class="gm-img-wrap" style="height:156px;border-bottom:1px solid var(--line,rgba(15,23,42,0.08));">
+              <img class="gm-img" src="{{ ind.img }}" alt="{{ ind.title }}" loading="lazy">
+            </div>
+            <div style="padding:22px 22px 24px;">
+              <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:21px;margin-bottom:9px;">{{ ind.title }}</h3>
+              <p style="font-size:13.5px;line-height:1.6;color:var(--muted,#64748B);">{{ ind.body }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section class="gm-section" style="position:relative;z-index:1;padding-top:100px;padding-bottom:100px;">
+    <div class="gm-leadership gm-split-2" style="display:grid;grid-template-columns:0.85fr 1.35fr;gap:56px;align-items:center;">
+      <div class="gm-img-wrap" style="border-radius:18px;aspect-ratio:4/5;border:1px solid var(--line,rgba(15,23,42,0.08));max-width:420px;box-shadow:0 28px 56px -28px rgba(28,27,23,0.2);">
+        <img class="gm-img" style="object-position:center 20%" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Samarth Sharma, Founder of Gigamatics" loading="lazy">
+      </div>
+      <div>
+        <div class="gm-eyebrow" style="margin-bottom:28px;">
+          <span class="gm-eyebrow-line"></span>
+          <span class="gm-eyebrow-text">Leadership</span>
+        </div>
+        <blockquote class="gm-quote" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(23px,2.7vw,36px);line-height:1.36;letter-spacing:-0.015em;margin-bottom:32px;padding-left:4px;">Gigamatics was built on a simple conviction: enterprise technology consulting should be led by practitioners who understand architecture, governance and risk — <em style="color:var(--accent,#0F62D4);">not by sales teams chasing volume.</em> Every engagement benefits from direct leadership, structured thinking, and a genuine commitment to building platforms that endure.</blockquote>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span style="width:48px;height:48px;border-radius:50%;background:linear-gradient(145deg,color-mix(in oklab,var(--accent,#0F62D4) 20%,var(--bg,#F4F7FB)),color-mix(in oklab,var(--accent,#0F62D4) 8%,var(--bg,#F4F7FB)));display:grid;place-items:center;font-family:'Newsreader',serif;font-weight:500;font-size:17px;color:var(--accent,#0F62D4);box-shadow:0 4px 12px -4px color-mix(in oklab,var(--accent,#0F62D4) 30%,transparent);">SS</span>
+          <div>
+            <div style="font-weight:700;font-size:16px;">Samarth Sharma</div>
+            <div style="font-size:13.5px;color:var(--muted,#64748B);">Founder, Gigamatics</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="position:relative;z-index:1;background:var(--bg2,#FAFBFD);border-top:1px solid var(--line,rgba(15,23,42,0.08));">
+    <div style="max-width:980px;margin:0 auto;padding:88px 34px;">
+      <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:clamp(32px,4.4vw,52px);letter-spacing:-0.02em;line-height:1.06;text-align:center;margin-bottom:44px;">Questions we hear often.</h2>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
+          <div class="gm-faq-item">
+            <button onclick="{{ f.toggle }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 26px;background:none;border:none;color:var(--ink,#0F172A);cursor:pointer;text-align:left;font-family:'Manrope',sans-serif;">
+              <span style="font-weight:600;font-size:16.5px;">{{ f.q }}</span>
+              <span style="flex-shrink:0;width:26px;height:26px;border-radius:7px;border:1px solid var(--line,rgba(15,23,42,0.08));display:grid;place-items:center;color:var(--accent,#0F62D4);font-size:18px;transition:transform .3s;transform:{{ f.rotate }};">+</span>
+            </button>
+            <div style="max-height:{{ f.maxh }};overflow:hidden;transition:max-height .4s ease;">
+              <p style="padding:0 26px 24px;font-size:14.5px;line-height:1.66;color:var(--muted,#64748B);max-width:74ch;">{{ f.a }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="gm-section" style="position:relative;z-index:1;padding-top:104px;padding-bottom:104px;">
+    <div class="gm-cta-box">
+      <h2 style="position:relative;font-family:'Newsreader',serif;font-weight:500;font-size:clamp(36px,5.4vw,72px);letter-spacing:-0.025em;line-height:1.04;max-width:18ch;margin:0 auto 22px;">Start your modernization journey.</h2>
+      <p style="position:relative;font-size:clamp(16px,1.6vw,20px);color:var(--muted,#64748B);max-width:52ch;margin:0 auto 36px;line-height:1.65;">Connect with our team to discuss your data, cloud or security landscape and define a clear, structured path forward.</p>
+      <a href="Contact.dc.html" class="gm-btn gm-btn-primary" style="position:relative;font-size:16px;padding:17px 36px;">Let's Talk</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="position:relative;z-index:1;border-top:1px solid var(--line,rgba(15,23,42,0.08));background:color-mix(in oklab,var(--bg2,#FAFBFD) 60%,var(--bg,#F4F7FB));">
+    <div class="gm-section gm-footer" style="padding-top:60px;padding-bottom:44px;display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:34px;align-items:start;">
+      <div>
+        <a href="Gigamatics.dc.html" style="display:flex;align-items:center;margin-bottom:16px;">
+          <img src="assets/logo.png" alt="GIGAMATICS" style="height:30px;width:auto;display:block;" />
+        </a>
+        <p style="font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent,#0F62D4);margin-bottom:14px;">Consult. Implement. Operate.</p>
+        <p style="font-size:14px;color:var(--muted,#64748B);max-width:34ch;line-height:1.62;">An enterprise technology partner helping organizations modernize with confidence — from strategy through operations.</p>
+      </div>
+      <div>
+        <div style="font-size:11.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted,#64748B);margin-bottom:16px;font-weight:600;">Explore</div>
+        <div style="display:flex;flex-direction:column;gap:11px;font-size:14px;color:var(--muted,#64748B);">
+          <a href="About.dc.html" style-hover="color:var(--ink,#0F172A)">About Us</a>
+          <a href="Services.dc.html" style-hover="color:var(--ink,#0F172A)">Services</a>
+          <a href="#managed" style-hover="color:var(--ink,#0F172A)">Managed Services</a>
+          <a href="#industries" style-hover="color:var(--ink,#0F172A)">Industries</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted,#64748B);margin-bottom:16px;font-weight:600;">Contact</div>
+        <div style="display:flex;flex-direction:column;gap:11px;font-size:14px;color:var(--muted,#64748B);">
+          <a href="mailto:info@gigamatics.com" style-hover="color:var(--ink,#0F172A)">info@gigamatics.com</a>
+          <a href="tel:+919250000962" style-hover="color:var(--ink,#0F172A)">+91 925 0000 962</a>
+          <span>Mohali, Punjab, India — 160055</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted,#64748B);margin-bottom:16px;font-weight:600;">Follow</div>
+        <div style="display:flex;flex-direction:column;gap:11px;font-size:14px;color:var(--muted,#64748B);">
+          <a href="Contact.dc.html" style-hover="color:var(--ink,#0F172A)">LinkedIn</a>
+          <a href="Contact.dc.html" style-hover="color:var(--ink,#0F172A)">X / Twitter</a>
+          <a href="Contact.dc.html" style-hover="color:var(--ink,#0F172A)">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid var(--line,rgba(15,23,42,0.08));">
+      <div class="gm-section" style="padding-top:22px;padding-bottom:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted,#64748B);">
+        <span>© 2026 Gigamatics Global Technology LLP</span>
+        <span>All rights reserved</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#0F62D4&quot;,&quot;options&quot;:[&quot;#0F62D4&quot;,&quot;#2B5B7A&quot;,&quot;#6A3F62&quot;,&quot;#A85638&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;},&quot;theme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;paper&quot;,&quot;options&quot;:[&quot;paper&quot;,&quot;dark&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;}}">
+class Component extends DCLogic {
+  state = { open: {}, counted: false, counts: [0,0,0,0,0,0] };
+
+  renderVals() {
+    const theme = this.props.theme ?? 'paper';
+    const accent = this.props.accent ?? '#0F62D4';
+    const paper = { bg:'#F4F7FB', bg2:'#FAFBFD', card:'#FFFFFF', ink:'#0F172A', muted:'#64748B', line:'rgba(15,23,42,0.08)', ph:'#EBE6DB' };
+    const dark  = { bg:'#1A1815', bg2:'#211E19', card:'#211E19', ink:'#F4F1EA', muted:'#A39E92', line:'rgba(244,241,234,0.14)', ph:'#1E293B' };
+    const t = theme === 'dark' ? dark : paper;
+    const vars = `--bg:${t.bg};--bg2:${t.bg2};--card:${t.card};--ink:${t.ink};--muted:${t.muted};--line:${t.line};--ph:${t.ph};--accent:${accent};`;
+
+    const impactDefs = [
+      { to:40, suffix:'%', dec:0, label:'Infrastructure Cost Reduction', desc:'Cloud optimization delivers significant savings through right-sizing, reserved capacity and architectural efficiency.' },
+      { to:3, suffix:'×', dec:0, label:'Faster Time-to-Recovery', desc:'With tested DR strategies, clients restore critical workloads three times faster than their previous approach.' },
+      { to:99.99, suffix:'%', dec:2, label:'Platform Uptime Delivered', desc:'Managed operations maintain best-in-class availability across complex, multi-environment platforms.' },
+      { to:70, suffix:'%', dec:0, label:'Reduction in Manual Processes', desc:'AI and automation free your teams from repetitive work to focus on what drives real value.' },
+      { to:100, suffix:'%', dec:0, label:'Compliance Audit Success', desc:'Every client we’ve prepared for a regulatory or security audit has passed — first time, on time.' },
+      { to:6, suffix:' wks', dec:0, label:'Average Time to Value', desc:'From initial scoping to production deployment, our structured model gets you to measurable value fast.' },
+    ];
+    const impact = impactDefs.map((d, i) => ({ ...d, display: this.state.counts[i].toFixed(d.dec) + d.suffix }));
+
+    const faqDefs = [
+      { q:'How does Gigamatics differ from a typical IT services company?', a:'We operate on a consultant-led model — experienced specialists own your engagement end-to-end, not account managers who hand off to generic delivery teams. Every recommendation is based on what’s genuinely best for your business, not on what we’re incentivised to sell.' },
+      { q:'Do you work with small and mid-size businesses, or only enterprise?', a:'We work across the spectrum — from scale-ups needing their first proper cloud architecture, to large enterprises requiring complex multi-cloud transformations. Our engagement models flex to match your size, budget and maturity.' },
+      { q:'What cloud platforms do you support?', a:'We are fully multi-cloud and vendor agnostic — supporting AWS, Microsoft Azure and Google Cloud Platform, as well as hybrid and on-premise environments. We recommend what’s right for you, not what’s right for our partner margins.' },
+      { q:'How quickly can we get started?', a:'Most engagements begin within 2–3 weeks of initial scoping. We offer rapid discovery workshops to understand your needs, then propose a phased approach that gets you to value as quickly as possible — often within 6–8 weeks.' },
+      { q:'Do you offer fixed-price or time-and-materials engagements?', a:'Both. We offer fixed-scope, fixed-price engagements for well-defined projects, as well as retainer and managed service models for ongoing work. We recommend the commercial structure that best suits your risk appetite.' },
+      { q:'What does your Disaster Recovery consulting involve?', a:'It covers the full lifecycle: current-state assessment, RTO/RPO definition, architecture design, implementation, tabletop exercises, live failover testing and annual review. We ensure your DR strategy is real and tested — not just documented.' },
+    ];
+    const faqs = faqDefs.map((f, i) => {
+      const isOpen = !!this.state.open[i];
+      return { ...f, toggle: () => this.setState((s) => ({ open: { ...s.open, [i]: !s.open[i] } })), maxh: isOpen ? '260px' : '0px', rotate: isOpen ? 'rotate(45deg)' : 'rotate(0deg)' };
+    });
+
+    return {
+      vars,
+      model: [
+        { kicker:'01 · Consult', title:'Strategy & Advisory', body:'Assessments, architecture design, roadmaps and governance frameworks informed by deep domain expertise.' },
+        { kicker:'02 · Implement', title:'Execution & Delivery', body:'Migration, deployment, configuration and optimization with structured accountability at every stage.' },
+        { kicker:'03 · Operate', title:'Managed Operations', body:'Ongoing management of databases, cloud, security and performance governed by consulting-defined standards.' },
+      ],
+      pillars: [
+        { num:'01', title:'Data Modernization & Analytics', body:'Transform legacy data estates into intelligent, cloud-native platforms — data lakes, pipelines and BI that turn raw data into decisions.' },
+        { num:'02', title:'Cloud & Infrastructure', body:'Assess, migrate, modernise and optimise your footprint across AWS, Azure, Oracle and GCP, with governance and cost optimisation.' },
+        { num:'03', title:'Security, Risk & Resilience', body:'From threat modelling to compliance frameworks and Zero Trust architecture, we protect your systems, data and reputation.' },
+        { num:'04', title:'Disaster Recovery & Continuity', body:'Design, test and manage resilient DR strategies across on-premise, hybrid and multi-cloud — zero compromise on uptime.' },
+        { num:'05', title:'Platform Reliability & Performance', body:'Proactive monitoring, capacity planning and optimization to keep enterprise platforms fast, stable and predictable.' },
+        { num:'06', title:'AI & Intelligent Automation', body:'Embed AI-driven workflows, predictive models and process automation — practical, scalable and aligned to outcomes.' },
+      ],
+      deliver: [
+        { h:'Architecture-first approach', b:'every solution is designed from structured assessment, not templates or assumptions.' },
+        { h:'Defined deliverables', b:'from architecture blueprints to governance playbooks, every engagement produces tangible outputs.' },
+        { h:'Seamless execution', b:'from design through deployment, we own the outcome alongside you with structured oversight.' },
+        { h:'Ongoing operational support', b:'post-deployment management, optimization and governance as your platform evolves.' },
+      ],
+      advantages: [
+        { num:'01', title:'Senior-Led Engagements', body:'Every engagement is led by experienced practitioners — not account managers or junior staff. Expertise is in the room, always.' },
+        { num:'02', title:'Founder Accountability', body:'Our founder is directly involved in strategy, architecture and delivery governance. One point of accountability, start to finish.' },
+        { num:'03', title:'Architecture Before Execution', body:'We define governance, standards and operating models before implementation begins. Clarity first, execution second.' },
+        { num:'04', title:'Full Lifecycle Ownership', body:'From assessment through stable operations — strategy, implementation and managed services under one accountable roof.' },
+      ],
+      impact,
+      managed: [
+        { title:'Database Operations', body:'Monitoring, performance tuning, patching, backup governance and platform stability across enterprise databases.' },
+        { title:'Backup & Recovery', body:'Automated, tested backup strategies with guaranteed recovery times and full audit trails for compliance.' },
+        { title:'Security & Compliance Ops', body:'Continuous posture monitoring, vulnerability management, access controls and governance alignment.' },
+        { title:'Cloud & Infrastructure Ops', body:'Operational oversight for cloud environments including cost governance, configuration and reliability.' },
+        { title:'Platform Reliability Ops', body:'Proactive performance monitoring, capacity planning, incident coordination and operational improvements.' },
+        { title:'Threat Detection & Response', body:'Real-time threat detection, SIEM management and incident response to protect your environment around the clock.' },
+      ],
+      industries: [
+        { tag:'Finance', title:'Banking & Financial', img:'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=900&q=85', body:'High-availability platforms, security controls and audit readiness for transaction-critical systems.' },
+        { tag:'Healthcare', title:'Healthcare', img:'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=85', body:'Secure data architectures, modernization and compliance-driven cloud and database operations.' },
+        { tag:'Retail', title:'Retail & eCommerce', img:'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=85', body:'Scalable platforms for digital transactions, analytics and seasonal demand handling.' },
+        { tag:'Education', title:'Education', img:'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=85', body:'Modern data environments, cloud-native platforms and AI for improved learning outcomes.' },
+        { tag:'SaaS', title:'Technology & SaaS', img:'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=85', body:'Resilient, cloud-native platforms that scale reliably with performance and cost efficiency.' },
+        { tag:'Logistics', title:'Logistics & Supply Chain', img:'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=85', body:'Always-on infrastructure for integrations, tracking and real-time operational visibility.' },
+      ],
+      faqs,
+    };
+  }
+
+  componentDidMount() {
+    const nav = document.querySelector('.gm-nav');
+    const onNavScroll = () => {
+      if (!nav) return;
+      nav.style.boxShadow = window.scrollY > 12 ? '0 8px 32px -12px rgba(15,23,42,0.08)' : 'none';
+    };
+    window.addEventListener('scroll', onNavScroll, { passive: true });
+    this._onNavScroll = onNavScroll;
+    onNavScroll();
+
+    const impactEl = document.getElementById('impact');
+    const maybeCount = () => {
+      if (this.state.counted || !impactEl) return;
+      const r = impactEl.getBoundingClientRect();
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      if (r.top < vh * 0.85 && r.bottom > 0) this.startCount();
+    };
+    const onScroll = () => maybeCount();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    this._onScroll = onScroll;
+    requestAnimationFrame(maybeCount);
+    this._fallback = setTimeout(() => this.startCount(), 2000);
+  }
+
+  startCount() {
+    if (this.state.counted) return;
+    this.setState({ counted: true });
+    const targets = [40, 3, 99.99, 70, 100, 6];
+    const dur = 1400, t0 = Date.now();
+    const ease = (x) => 1 - Math.pow(1 - x, 3);
+    if (this._countTimer) clearInterval(this._countTimer);
+    this._countTimer = setInterval(() => {
+      const p = Math.min(1, (Date.now() - t0) / dur);
+      const e = ease(p);
+      this.setState({ counts: targets.map((v) => v * e) });
+      if (p >= 1) { clearInterval(this._countTimer); this._countTimer = null; this.setState({ counts: targets }); }
+    }, 33);
+  }
+
+  componentWillUnmount() {
+    if (this._onNavScroll) window.removeEventListener('scroll', this._onNavScroll);
+    if (this._onScroll) { window.removeEventListener('scroll', this._onScroll); window.removeEventListener('resize', this._onScroll); }
+    if (this._fallback) clearTimeout(this._fallback);
+    if (this._countTimer) clearInterval(this._countTimer);
+  }
+}
+</script>
+
+
+</body></html>
